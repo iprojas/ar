@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <title>Arfitty</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="stylesheet" href="demo-styles.css" />
 
     <script
@@ -14,7 +13,7 @@
     ></script>
   </head>
   <body>
-   <model-viewer src="/model/bank.glb" camera-controls poster="" shadow-intensity="1" ar ar-scale="fixed" camera-controls alt="Modelos">
+   <model-viewer src="ar/model/bank.glb" camera-controls poster="" shadow-intensity="1" ar ar-scale="fixed" camera-controls alt="Modelos">
   
   <button slot="ar-button" id="ar-button">
     Ver en el espacio
@@ -43,7 +42,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "/model/" + name;
+    const base = "ar/model/" + name;
     modelViewer.src = base + '.glb';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
