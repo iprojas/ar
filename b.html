@@ -13,7 +13,7 @@
     ></script>
   </head>
   <body>
-   <model-viewer src="ar/model/bank.glb" camera-controls poster="" shadow-intensity="1" ar ar-scale="fixed" camera-controls alt="Modelos">
+   <model-viewer src="model/bank.glb" camera-controls poster="" shadow-intensity="1" ar ar-scale="fixed" camera-controls alt="Modelos">
   
   <button slot="ar-button" id="ar-button">
     Ver en el espacio
@@ -42,7 +42,7 @@
   const modelViewer = document.querySelector("model-viewer");
 
   window.switchSrc = (element, name) => {
-    const base = "ar/model/" + name;
+    const base = "model/" + name;
     modelViewer.src = base + '.glb';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
